@@ -15,7 +15,7 @@ class BuildRvo2Ext(_build_ext):
         build_dir = os.path.abspath('build/RVO2')
         if not os.path.exists(build_dir):
             os.makedirs(build_dir)
-            subprocess.check_call(['cmake', '../..', '-G"MinGW Makefiles" -DCMAKE_CXX_FLAGS=-fPIC-DCMAKE_C_COMPILER=C:/TDM-GCC-64/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/TDM-GCC-64/bin/g++.exe -DCMAKE_CXX_FLAGS=-fPIC '],
+            subprocess.check_call(['cmake', '../..', '-G', "MinGW Makefiles"],
                                   cwd=build_dir)
         subprocess.check_call(['cmake', '--build', '.'], cwd=build_dir)
 

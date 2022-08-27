@@ -1,3 +1,6 @@
+#Windows build
+Here are the steps I took that worked: I used CMake 3.22.2 and Visual Studio 2022. Then I used CMake-GUI to configure the input folder to the root folder (with CMakeLists.txt), the output folder the build folder. It then generated Visual Studio 2022 projects. Then open the solution file (.sln) in the build folder, select Release, build everything. For some (weird) reason the output library RVO.lib is in build/src/Release/RVO.lib. Then manually copy RVO.lib to the root folder (where setup.py and CMakeLists.txt) is located. Then execute the python commands to build and install.
+
 Python bindings for Optimal Reciprocal Collision Avoidance
 ==========================================================
 
